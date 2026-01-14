@@ -1,0 +1,29 @@
+Merge Sort
+1. Merge Sort Aşamaları
+Dizi: [16, 21, 11, 8, 12, 22]
+A. Parçalama (Divide) Aşaması:
+ * Diziyi ortadan ikiye bölüyoruz:
+   * Sol: [16, 21, 11]
+   * Sağ: [8, 12, 22]
+ * Sol tarafı tekrar bölüyoruz:
+   * [16] ve [21, 11]
+ * [21, 11] parçasını bölüyoruz:
+   * [21] ve [11]
+ * Sağ tarafı ([8, 12, 22]) bölüyoruz:
+   * [8] ve [12, 22]
+ * [12, 22] parçasını bölüyoruz:
+   * [12] ve [22]
+Şu an elimizde tüm elemanlar tek başına (tek hücre) kaldı: [16], [21], [11], [8], [12], [22]
+B. Birleştirme (Merge) ve Sıralama Aşaması:
+ * [21] ve [11] birleşir: [11, 21]
+ * [16] ile [11, 21] birleşir: [11, 16, 21] (Sol taraf tamamlandı)
+ * [12] ve [22] birleşir: [12, 22]
+ * [8] ile [12, 22] birleşir: [8, 12, 22] (Sağ taraf tamamlandı)
+ * Son olarak iki ana grup birleşir:
+   * [11, 16, 21] ve [8, 12, 22] kıyaslanarak birleştirilir.
+   * Sonuç: [8, 11, 12, 16, 21, 22]
+2. Big-O Gösterimi
+Merge Sort, diziyi her zaman ortadan ikiye böldüğü için (\log n katman) ve her katmanda tüm elemanları karşılaştırdığı için (n işlem) karmaşıklığı sabittir:
+ * Worst Case: O(n \log n)
+ * Average Case: O(n \log n)
+ * Best Case: O(n \log n)
