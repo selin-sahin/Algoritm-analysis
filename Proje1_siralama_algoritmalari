@@ -1,0 +1,31 @@
+1. Insertion Sort
+Dizi: [22, 27, 16, 2, 18, 6]
+Insertion Sort, diziyi sanal olarak "sıralı" ve "sırasız" olarak ikiye böler. Her adımda sırasız kısımdan bir eleman seçilip sıralı kısımdaki doğru yerine yerleştirilir.
+
+ * 1. Adım: [22] | [27, 16, 2, 18, 6] (22 sıralı kabul edilir. 27, 22 ile kıyaslanır; büyük olduğu için yerinde kalır.)
+ * 2. Adım: [22, 27] | [16, 2, 18, 6] (16 seçilir. 27'den ve 22'den küçük olduğu için en başa çekilir.)
+ * 3. Adım: [16, 22, 27] | [2, 18, 6] (2 seçilir. Sıralı gruptaki tüm sayılardan küçük olduğu için en başa yerleşir.)
+ * 4. Adım: [2, 16, 22, 27] | [18, 6] (18 seçilir. 27 ve 22'den küçük, 16'dan büyüktür. 16 ile 22 arasına girer.)
+ * 5. Adım: [2, 16, 18, 22, 27] | [6] (6 seçilir. 2'den büyük, 16'dan küçüktür. 2 ile 16 arasına girer.)
+ * Sonuç: [2, 6, 16, 18, 22, 27]
+
+Big-O Gösterimi:
+ * Worst Case (En Kötü Durum): O(n^2)
+ * Average Case (Ortalama Durum): O(n^2)
+ * Best Case (En İyi Durum): O(n) (Dizi zaten sıralıysa)
+
+Dizi sıralandıktan sonra: [2, 6, 16, 18, 22, 27]
+18 sayısı dizinin ortalarına yakın bir konumda (4. sırada) yer almaktadır. Bu nedenle 18 sayısını aradığımızda bu durum Average Case (Ortalama Durum) kapsamına girer.
+
+2. Selection Sort (Seçmeli Sıralama) - İlk 4 Adım
+Dizi: [7, 3, 5, 8, 2, 9, 4, 15, 6]
+Selection Sort: Her adımda dizinin sırasız kısmındaki en küçük elemanı bulur ve onu sırasız kısmın başındaki elemanla takas eder.
+
+ * 1. Adım: Dizideki en küçük sayı 2'dir. En baştaki 7 ile yer değiştirir.
+   * Dizi: [2, 3, 5, 8, 7, 9, 4, 15, 6]
+ * 2. Adım: Kalan kısımda ([3, 5, 8, 7, 9, 4, 15, 6]) en küçük sayı 3'tür. Zaten doğru yerdedir, değişiklik olmaz.
+   * Dizi: [2, 3, 5, 8, 7, 9, 4, 15, 6]
+ * 3. Adım: Kalan kısımda ([5, 8, 7, 9, 4, 15, 6]) en küçük sayı 4'tür. 5 ile yer değiştirir.
+   * Dizi: [2, 3, 4, 8, 7, 9, 5, 15, 6]
+ * 4. Adım: Kalan kısımda ([8, 7, 9, 5, 15, 6]) en küçük sayı 5'tir. 8 ile yer değiştirir.
+   * Dizi: [2, 3, 4, 5, 7, 9, 8, 15, 6]
